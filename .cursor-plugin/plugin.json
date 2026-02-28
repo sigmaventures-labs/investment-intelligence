@@ -5,6 +5,7 @@
   "author": {
     "name": "SF"
   },
+  "logo": "assets/logo.png",
   "license": "MIT",
   "keywords": [
     "finance",
