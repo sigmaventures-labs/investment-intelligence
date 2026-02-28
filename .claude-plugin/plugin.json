@@ -1,0 +1,9 @@
+{
+  "name": "investment-intelligence",
+  "version": "1.0.0",
+  "description": "Six analyst workflows for public equities, real estate, and private equity — thematic screening, investment memos, IC prep, catalyst mapping, cross-asset signals, and scenario analysis.",
+  "author": {
+    "name": "SF"
+  },
+  "commands": ".claude/commands/"
+}

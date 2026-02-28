@@ -1,0 +1,21 @@
+---
+description: "Build a forward catalyst calendar for public equities. Trigger for 'what events are coming up', 'map catalysts', 'event calendar', 'timing risk', or identifying value-moving events."
+alwaysApply: false
+---
+
+# Catalyst Mapping
+
+## Asset Class Routing
+
+Public equities: earnings, regulatory/FDA, macro/FOMC, corporate actions, industry/competitive, data, technical/flow.
+
+## Core Framework
+1. **Enumerate**: Walk through every category. For each: event, date, certainty, direction, magnitude, probability, thesis relevance
+2. **Assess asymmetry**: What's priced in? Historical precedent? Positioning? → Positive / Negative / Symmetric
+3. **Build calendar**: Chronological by month/quarter
+4. **Analyze**: Clusters (high-vol windows), gaps (dead money), sequencing dependencies
+5. **Recommend**: Pre-position, reduce/hedge, monitor, research priorities
+
+Key insight: favorable expected outcome ≠ favorable risk/reward of holding through the event. Asymmetry assessment is more important than direction.
+
+Note: Real estate and private equity overlays are in development.

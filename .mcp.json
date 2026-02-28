@@ -1,0 +1,59 @@
+{
+  "mcpServers": {
+    "fred": {
+      "url": "https://mcp.stlouisfed.org/mcp",
+      "description": "Federal Reserve Economic Data (FRED). Free, no API key required. Provides macro data: Treasury yields, credit spreads, employment, CPI, Fed funds rate, GDP, housing starts, and more.",
+      "enabled": true
+    }
+  },
+
+  "_paidProviders": {
+    "_note": "These connectors require a subscription or API key from the respective provider. Uncomment and configure to enable. URLs sourced from Anthropic's financial-services-plugins repo (Feb 2026).",
+
+    "factset": {
+      "url": "https://mcp.factset.com/mcp",
+      "description": "FactSet: real-time market data, fundamental analysis, earnings estimates, research insights.",
+      "enabled": false
+    },
+    "spglobal": {
+      "url": "https://kfinance.kensho.com/integrations/mcp",
+      "description": "S&P Global Capital IQ: company tearsheets, earnings previews, transaction data.",
+      "enabled": false
+    },
+    "pitchbook": {
+      "url": "https://premium.mcp.pitchbook.com/mcp",
+      "description": "PitchBook: private company data, M&A transactions, PE/VC fund data.",
+      "enabled": false
+    },
+    "morningstar": {
+      "url": "https://mcp.morningstar.com/mcp",
+      "description": "Morningstar: fund analytics, equity research, portfolio analysis.",
+      "enabled": false
+    },
+    "daloopa": {
+      "url": "https://mcp.daloopa.com/server/mcp",
+      "description": "Daloopa: machine-readable financial models and company fundamentals.",
+      "enabled": false
+    },
+    "aiera": {
+      "url": "https://mcp-pub.aiera.com",
+      "description": "Aiera: earnings call transcripts, investor presentations, event monitoring.",
+      "enabled": false
+    },
+    "lseg": {
+      "url": "https://api.analytics.lseg.com/lfa/mcp",
+      "description": "LSEG: real-time pricing, yield curves, FX analytics, fixed income data.",
+      "enabled": false
+    },
+    "moodys": {
+      "url": "https://api.moodys.com/genai-ready-data/m1/mcp",
+      "description": "Moody's: credit ratings, risk analytics, economic forecasts.",
+      "enabled": false
+    },
+    "mtnewswires": {
+      "url": "https://vast-mcp.blueskyapi.com/mtnewswires",
+      "description": "MT Newswires: real-time financial news and market data.",
+      "enabled": false
+    }
+  }
+}

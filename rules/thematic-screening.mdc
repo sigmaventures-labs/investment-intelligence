@@ -1,0 +1,37 @@
+---
+description: "Map a macro or thematic thesis to investable assets in public equities. Trigger for 'who benefits from X', 'what plays on Y', 'screen for exposure to Z', thematic/sector screening, or mapping second/third-order effects of a trend."
+alwaysApply: false
+---
+
+# Thematic Screening
+
+Turn a macro thesis into a structured, investable universe of affected assets.
+
+## Asset Class Routing
+
+Public equities: company map with tickers, revenue exposure %, consensus positioning.
+
+## Core Framework
+
+### Step 1 — Decompose into Causal Chains
+Break thesis into first-order (directly affected), second-order (suppliers, competitors, dependent), and third-order (behavioral shifts, adjacent markets, substitution).
+
+### Step 2 — Build Asset Map
+Four tiers: Direct Beneficiaries, Indirect Beneficiaries, Third-Order/Non-Obvious, Negative Exposure/Losers. Each entry needs: specific mechanism, conviction (H/M/L), quantified exposure metric.
+
+### Step 3 — Pressure-Test
+For each entry: Is this priced in/consensus? What's the counter-thesis? Is exposure pure or diluted? Does it pass investability filters (liquidity, access, mandate)?
+
+### Step 4 — Prioritize
+Top 5 Deep Dive Candidates ranked by: exposure magnitude, underappreciation by market, investability, catalyst proximity.
+
+## Output
+Thesis Summary → Causal Chain Diagram → Asset Map tables → Pressure Tests → Top 5 → Cross-Asset Implications (if multi-asset) → Data Gaps
+
+## Quality Checks
+- [ ] 3+ levels of causal chain depth
+- [ ] Losers included, not just beneficiaries
+- [ ] Specific mechanisms, not category association
+- [ ] Non-obvious entries included
+
+Note: Real estate and private equity overlays are in development.

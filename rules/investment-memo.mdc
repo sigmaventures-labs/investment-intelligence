@@ -1,0 +1,39 @@
+---
+description: "Generate a professional investment memo for public equities. Trigger for 'write a pitch on X', 'draft an investment case', or any formal investment recommendation."
+alwaysApply: false
+---
+
+# Investment Memo Generation
+
+## Asset Class Routing
+
+Public equities: L/S memo — price target, variant perception, catalysts, valuation (DCF/comps).
+
+## Universal Principles
+- **Argue, don't describe** — every paragraph advances the thesis
+- **Quantify everything** — no vague directional claims
+- **Variant perception / edge** — what do you see that others don't?
+- **Steel-man the counter** — risk section should be as strong as a bear's
+- **Time-bound** — catalysts
+- **Source the edge** — what data/analysis underlies the differentiated view?
+
+## Universal Skeleton
+1. Header / Deal Summary (key terms at a glance)
+2. Executive Summary (3-5 sentences)
+3. Variant Perception / Edge
+4. Asset / Business Overview (thesis-relevant only)
+5. Key Drivers / Value Creation (3-5 variables, your view vs. consensus)
+6. Path to Value Realization
+7. Valuation / Returns with sensitivity table
+8. Risk Factors with mitigants
+9. Position Sizing / Capital Deployment
+10. Monitoring Framework
+
+## Quality Checks
+- [ ] Exec summary self-contained in 5 sentences
+- [ ] Variant perception is specific
+- [ ] Returns transparently derived with sensitivity
+- [ ] Risks honest with mitigants
+- [ ] No generic filler — every paragraph earns its place
+
+Note: Real estate and private equity overlays are in development.

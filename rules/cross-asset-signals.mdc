@@ -1,0 +1,25 @@
+---
+description: "Synthesize signals across rates, credit, FX, commodities, and vol to confirm/deny theses for public equities. Trigger for 'what are rates/credit telling us', 'cross-asset check', 'macro backdrop', or reading across markets."
+alwaysApply: false
+---
+
+# Cross-Asset Signal Synthesis
+
+## Core Five Lenses
+1. **Rates**: Curve shape, real rates, policy path, breakevens
+2. **Credit**: IG/HY spreads, CDS, leveraged loans, distressed ratios
+3. **FX**: DXY, EM FX, carry trades, flows
+4. **Commodities**: Oil (demand), copper (industrial), gold (risk), curve shape
+5. **Vol/Positioning**: VIX, MOVE, skew, correlation regimes
+
+## Equities Layer
+Market internals (breadth, rotation, factor), earnings revisions, fund flows.
+
+## Framework
+1. State thesis as testable proposition
+2. Survey core lenses + equities layer
+3. Alignment matrix: agreements AND disagreements
+4. For dislocations: which market is right?
+5. Opinionated synthesis: verdict, risks, actions, monitoring thresholds
+
+Note: Real estate and private equity overlays are in development.

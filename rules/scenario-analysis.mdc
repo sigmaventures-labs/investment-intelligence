@@ -1,0 +1,20 @@
+---
+description: "Build scenario analyses with probability-weighted returns and sensitivity tables for public equities. Trigger for 'bull/base/bear', 'stress test', 'sensitivity analysis', 'expected value', 'model upside/downside', or evaluating investments across scenarios."
+alwaysApply: false
+---
+
+# Scenario & Sensitivity Analysis
+
+## Asset Class Routing
+
+Public equities: variables (revenue growth, margins, multiple). Metric: stock return %.
+
+## Core Framework
+1. **Identify** 2-5 highest-sensitivity variables ranked by return impact
+2. **Define 3-5 scenarios**: all variables specified, internally consistent, falsifiable. Base = your view, NOT consensus. Probabilities sum ~100%. NOT symmetric.
+3. **Calculate** probability-weighted expected return and risk/reward ratio
+4. **Sensitivity table**: 2-variable matrix, highlight cliff edges and break-even
+5. **Monitoring**: leading indicators with scenario-specific thresholds
+6. **Decision triggers**: observable conditions for increase/hold/reduce/exit
+
+Note: Real estate and private equity overlays are in development.
