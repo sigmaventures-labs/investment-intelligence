@@ -8,5 +8,5 @@ Thumbs.db
 *.log
 
 .cursor-tutor/
-tests/reports/
+tests/
 .internal/
