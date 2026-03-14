@@ -1,8 +1,16 @@
-# Investment Intelligence — AI Skills for Equity Analysis
+# Investment Intelligence — Analytical Infrastructure for Equity Research
 
-Six structured analyst workflows for public equities — thematic screening,
-investment memos, IC prep, catalyst mapping, cross-asset signals, and scenario
-analysis. Available as a Cursor plugin, compatible with Claude Code and OpenClaw.
+Open-source decision frameworks that encode the analytical core of a
+professional investment process — thematic screening, investment memos, IC prep,
+catalyst mapping, cross-asset signals, and scenario analysis. Works with Cursor,
+Claude Code, OpenClaw, and Cowork.
+
+These 6 skills are the free, open-source layer of a broader investment
+analytical platform. They produce structured, institutional-grade analysis that
+any analyst can use today. An [Engine API](https://investmentintelligence.ai)
+is in development — a hosted computation endpoint that turns the same
+methodologies into computed, auditable research objects callable by analysts,
+tools, and AI agents.
 
 ## Quick Start
 
@@ -86,18 +94,36 @@ Each link shows a full output from one skill run in Surface Mode:
 
 ---
 
-## How the Skills Chain Together
+## Where These Skills Fit
+
+A professional PM's investment process is a closed loop with roughly 10 stages —
+from sourcing ideas through thesis construction, stress-testing, sizing,
+execution, monitoring, and post-mortem. These 6 skills cover the analytical core:
 
 ```
-Thematic Screening
-  → identifies companies
-    → Investment Memo (per company)
-      → CIO/PM Q&A Prep (per memo)
+  Research           Idea       Thesis            Stress-           Expression
+  Agenda          → Triage  → Underwriting    → Testing          → Design →
+  ─────             ─────      ──────────        ───────            ──────
+  Thematic                     Investment        CIO Q&A Prep
+  Screening                    Memo              Scenario Analysis
 
-Catalyst Mapping + Cross-Asset Signals
-  → feed into Scenario Analysis
-    → feeds back into Investment Memo (returns + risk sections)
+  Portfolio        Risk /       Monitoring        Rebalance /      Post-
+→ Construction  → Sizing    → Setup           → Exit           → Mortem
+  ──────────      ──────       ──────            ─────            ──────
+                                Cross-Asset
+                                Catalyst Mapping
 ```
+
+The skills chain naturally:
+
+- **Thematic Screening** identifies companies → **Investment Memo** underwrites
+  the thesis → **CIO Q&A Prep** stress-tests it
+- **Catalyst Mapping** + **Cross-Asset Signals** feed monitoring →
+  **Scenario Analysis** quantifies the risk/reward
+
+The uncovered stages — triage, expression design, sizing, portfolio
+construction, monitoring loops, and post-mortems — are where the
+[Engine API](https://investmentintelligence.ai) will expand coverage.
 
 ### Example Workflow
 
@@ -149,6 +175,28 @@ cp -r skills/ ~/.openclaw/skills/
 
 ---
 
+## Engine API
+
+The free skills produce structured markdown with LLM-estimated numbers. The
+Engine API — currently in development — computes real analytical objects from
+the same methodologies:
+
+|                  | Free Skills             | Engine API                                              |
+|------------------|-------------------------|---------------------------------------------------------|
+| **Output**       | Markdown document       | Structured JSON with full methodology                   |
+| **Numbers**      | LLM estimates (flagged) | Computed from valuation models — every formula exposed   |
+| **Sensitivity**  | 3×3 table (estimated)   | N×N grid (calculated) + Monte Carlo distributions       |
+| **Auditability** | None                    | Every computation exposed with derivations               |
+| **Consumers**    | Human analyst in IDE    | Analysts, Excel add-ins, web apps, agents, applications |
+
+The Engine is a client-agnostic REST API — the same endpoint serves a Cursor
+skill, an Excel add-in, a web app, or another AI agent. Structured JSON in,
+structured JSON out.
+
+**Status:** In development. [Join the waitlist →](https://investmentintelligence.ai)
+
+---
+
 ## Architecture
 
 Each skill follows a modular core + overlay design using the
@@ -194,11 +242,11 @@ Adapt to your fund's specific needs:
 
 ## Roadmap
 
-| Version | Scope | Status |
-|---------|-------|--------|
-| **v1** | 6 skills, public equities. FRED MCP. Surface/Enhanced modes. | Current |
-| **v1.5** | Real estate and private equity overlays with asset-class-native frameworks | Planned |
-| **v2** | Internal/proprietary data integration via MCP. Structured ingestion for internal KPIs, portfolio data, deal models. | Future |
+| Phase | Scope | Status |
+|-------|-------|--------|
+| **Skills v1** | 6 analytical skills, public equities, FRED MCP, Surface/Enhanced modes | Current |
+| **Engine MVP** | Hosted computation API — Scenario Analysis (computed sensitivity grids, Monte Carlo, break-even surfaces, structured JSON) | In development |
+| **Engine expansion** | Additional skills (Investment Memo computation, position sizing, thesis monitoring), additional asset classes (RE, PE), agent marketplace registration | Planned |
 
 ---
 
@@ -212,9 +260,16 @@ The optional FRED MCP connector is also free.
 In Surface Mode, all market data and estimates come from the LLM's training data
 and are flagged with `[estimate]`. Connect MCP data sources for verified figures.
 
+**Can my application or agent call the Engine API?**
+Yes — the Engine is a standard REST API that accepts JSON and returns structured
+JSON. Any client that can make an HTTP request can call it: IDE skill, Excel
+add-in, web app, another AI agent, or a raw API consumer. The Engine is in
+development — [join the waitlist](https://investmentintelligence.ai) for early
+access.
+
 **Can I use this for real estate or private equity?**
-RE and PE overlays are in development (see Roadmap). The current release is
-optimized for public equities.
+RE and PE overlays are planned for the Engine expansion phase. The current
+skills release is optimized for public equities.
 
 **How do I connect my firm's internal data?**
 Add your own MCP server to `.mcp.json`. Skills automatically use MCP data when
