@@ -33,6 +33,17 @@ Every output must display an analysis mode label in the header:
 
 Default to Surface Mode unless MCP tools or user-provided data are explicitly present.
 
+### Enhanced Mode — Data Sources
+
+When a data MCP is configured (see `.mcp.json`), ground these inputs live; degrade per-figure to Surface Mode otherwise:
+
+- **Price history → realized volatility (σ)** — a market-data/prices MCP (a paid provider in `.mcp.json`)
+- **Valuation multiples, margins, growth** — a fundamentals MCP
+- **Risk-free rate / discount inputs** — FRED (`DGS10`, `DFII10`)
+- **Historical base rates** (e.g. sector or event return distributions) — a web-search MCP or research; flag if unavailable
+
+Cite each live figure (source + date); flag estimates `[estimate]`. A computed σ and real base rates beat hand-picked point estimates for the sensitivity grid and probability weights.
+
 ### Data Inputs Block
 
 The first section of every output (immediately after the header) must be a **Data Inputs** block listing all sources used:

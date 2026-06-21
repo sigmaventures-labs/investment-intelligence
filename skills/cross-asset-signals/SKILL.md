@@ -34,6 +34,19 @@ Every output must display an analysis mode label in the header:
 
 Default to Surface Mode unless MCP tools or user-provided data are explicitly present.
 
+### Enhanced Mode — Data Sources
+
+When a data MCP is configured (see `.mcp.json`), pull each lens live instead of estimating; degrade to Surface Mode per-figure if a source is missing. FRED (free, no API key) covers most of the macro tape:
+
+- **Rates & duration** — 10y nominal (`DGS10`), 10y real/TIPS (`DFII10`), 2s10s (`T10Y2Y`), Fed funds (`FEDFUNDS`), breakevens (`T10YIE`) → FRED
+- **Credit** — HY OAS (`BAMLH0A0HYM2`), IG OAS (`BAMLC0A0CM`) → FRED
+- **FX** — broad dollar (`DTWEXBGS`) → FRED; specific pairs → market-data MCP
+- **Commodities** — WTI (`DCOILWTICO`), copper (`PCOPPUSDM`), gold → FRED / market-data MCP
+- **Volatility** — VIX (`VIXCLS`) → FRED; MOVE, skew, term structure → market-data MCP
+- **Single-stock / index prices** — a market-data/prices MCP (a paid provider in `.mcp.json`, or any prices MCP)
+
+Cite each live figure (source + date) in the Data Inputs block; flag the rest `[estimate]`. With a live feed, this skill ranks dislocations on real levels rather than estimated ones.
+
 ### Data Inputs Block
 
 The first section of every output (immediately after the header) must be a **Data Inputs** block listing all sources used:

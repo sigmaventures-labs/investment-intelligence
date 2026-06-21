@@ -33,6 +33,17 @@ Every output must display an analysis mode label in the header:
 
 Default to Surface Mode unless MCP tools or user-provided data are explicitly present.
 
+### Enhanced Mode — Data Sources
+
+When a data MCP is configured (see `.mcp.json`):
+
+- **Fundamentals (financials, margins, growth)** — a fundamentals MCP
+- **Prices / valuation multiples** — a market-data/prices MCP
+- **Macro backdrop** — FRED (`DGS10`, `DFII10`, `BAMLH0A0HYM2`)
+- **Consensus / qualitative context** — a news or web-search MCP
+
+Anchor valuation and variant-perception claims to live figures; cite sources, flag estimates `[estimate]`.
+
 ### Data Inputs Block
 
 The first section of every output (immediately after the header) must be a **Data Inputs** block listing all sources used:
