@@ -60,9 +60,16 @@ more powerful when used with proprietary operating data.
   AI estimates from training data. Every estimate is flagged with `[estimate]`
   for verification. Outputs include a Data Inputs block showing what was sourced
   vs. estimated.
-- **Enhanced Mode** — Connect MCP data sources (FRED for macro data, or paid
-  providers like FactSet) and the same skills produce analysis grounded in real,
-  verified data.
+- **Enhanced Mode** — Connect MCP data sources and the same skills ground their
+  analysis in real data. Each skill ships a concrete **Enhanced Mode — Data
+  Sources** section (see any `SKILL.md`) mapping its specific inputs to the right
+  connector, with per-figure graceful fallback to Surface Mode when a source
+  isn't available.
+
+**Principle: deterministic feeds for numbers, web search for narrative.** Any
+load-bearing number should come from a deterministic, dated source (a market-data
+MCP for prices/fundamentals; FRED for macro). A web-search MCP is for
+news/consensus/qualitative context — not for numeric values.
 
 Data quality determines signal strength. Workflow quality determines decision
 discipline. These skills encode the latter.
@@ -71,13 +78,22 @@ discipline. These skills encode the latter.
 
 The `.mcp.json` file configures data connections:
 
-- **FRED** (active, free) — macro data: Treasury yields, credit spreads,
-  employment, CPI, Fed funds rate
+- **FRED** (active, free, no key for the MCP) — macro data: US **and
+  international** series (Treasury + German/French/euro-area government-bond
+  yields, credit spreads, policy rates, CPI, employment). Covers most of the
+  cross-asset macro tape for free.
+- **Market data / fundamentals** (bring your own) — add any MCP that serves
+  equity prices and fundamentals to ground prices, valuation multiples, and
+  realized volatility. Coverage varies by provider (some are US-only); pick one
+  that covers your universe.
 - **Paid providers** (stubs, requires subscription) — FactSet, S&P Global,
-  PitchBook, Morningstar, Daloopa, Aiera, LSEG, Moody's
+  PitchBook, Morningstar, Daloopa, Aiera, LSEG, Moody's — for institutional
+  global coverage.
 
-To enable a paid provider, uncomment its entry in `.mcp.json` and configure
-your API credentials per the provider's documentation.
+To enable a connector, add or uncomment its entry in `.mcp.json` and configure
+your API credentials per the provider's documentation. Skills automatically use
+MCP data when present and fall back to Surface Mode (flagged `[estimate]`) when
+not.
 
 ---
 
